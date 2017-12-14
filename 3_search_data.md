@@ -1,10 +1,10 @@
-#SEARCH DATA
-##1. Cari 
+# SEARCH DATA
+## 1. Cari 
 ```
 curl -XGET http://localhost:9200/nama_index/nama_mapping/_search
 ```
 
-##2. Cari Match All
+## 2. Cari Match All
 ```
 curl -XPOST http://localhost:9200/nama_index/nama_mapping/?pretty=true -d '{
 	"from":0,
@@ -15,7 +15,7 @@ curl -XPOST http://localhost:9200/nama_index/nama_mapping/?pretty=true -d '{
 }'
 ```
 
-##3. Cari Match pada field tertentu
+## 3. Cari Match pada field tertentu
 ```
 curl -XPOST http://localhost:9200/nama_index/nama_mapping/_search -d '{
 	"from":0, // dari 0
@@ -40,7 +40,7 @@ curl -XPOST http://localhost:9200/nama_index/nama_mapping/_search -d '{
 }'
 ```
 
-##4. Cari Dengan Bool Query
+## 4. Cari Dengan Bool Query
 ```
 select * from nama_maping where name like '*x*' and summary like 'fictional' and summary like 'comic'
 

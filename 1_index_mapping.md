@@ -59,16 +59,16 @@ curl -XPUT http://localhost:9200/nama_index/_mapping/nama_mapping -d '{
 }'
 ```
 
-##4. Hapus Index
+## 4. Hapus Index
 ```
 curl -XDELETE http://localhost:9200/nama_index
 ```
 
-##5. Deskripsi Mapping
+## 5. Deskripsi Mapping
 ```
 curl -XGET http://localhost:9200/nama_index/_mappings
 ```
-##6. Melihat Daftar Index
+## 6. Melihat Daftar Index
 
 ```
 curl -XGET http://localhost:9200/_aliases
