@@ -1,12 +1,12 @@
-#INDEX dan MAPPING ELASTICSEARCH
+# INDEX dan MAPPING ELASTICSEARCH
 
-##1. Buat Index
+## 1. Buat Index
 
 ```
 curl -XPUT http://localhost:9200/nama_index/?pretty=true
 ```
 
-##2. Buat Index Beserta Mapping
+## 2. Buat Index Beserta Mapping
 ```
 curl -XPUT http://localhost:9200/nama_index/nama_maping -d '{
 	"mappings" : {
@@ -37,7 +37,7 @@ curl -XPUT http://localhost:9200/nama_index/nama_maping -d '{
 }'
 ```
 
-##3. Buat Mapping dari index yang sudah ada
+## 3. Buat Mapping dari index yang sudah ada
 Buat Satu Satu propertiesnya
 ```
 curl -XPUT http://localhost:9200/nama_index
