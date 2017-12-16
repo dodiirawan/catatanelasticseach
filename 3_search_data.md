@@ -72,3 +72,39 @@ curl -XPOST http://localhost:9200/nama_index/nama_mapping/_search -d '{
 	}
 }'
 ```
+## 5. Cari Dengan Bool Query 'should'
+```
+select * from nama_index where summary like '%need%' and summary like '%superhero%'
+
+curl -XPOST http://localhost:9200/nama_index/nama_mapping/_search -d ' {
+	"from":0,
+	"size":5,
+	"sort":[
+		"_score"
+	],
+	"query" : {
+		"bool" : {
+			"should" : [
+				{
+					"match" : {
+						"summary" : "need"
+					}
+				},
+				{
+					"match" : {
+						"summary" : "superhero"
+					}
+				}
+			]
+		}
+	},
+	"highlight" : {
+		"pre_tags" : ["<span>"],
+		"post_tags" : ["</span>"],
+		"fields" : { 
+			"summary" : {}
+		}
+	}
+
+}'
+```
